@@ -1,4 +1,4 @@
-from utils.LabelByThreshold import labelByThreshold
+from utils.utils import labelByThreshold
 from _tree import Tree
 class DecisionTreeClassifier():
 
