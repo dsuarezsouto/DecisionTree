@@ -14,7 +14,7 @@ class DecisionTreeClassifier():
 
     def train(self,X,y):
         self.tree = Tree()
-        return self.tree.build(X,y,self.ordinalFeatures)
+        return self.tree.build(X,y,self.ordinalFeatures,self.max_depth,self.criterion)
 
     def predict(self,X):
 
