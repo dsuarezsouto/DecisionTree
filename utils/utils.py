@@ -28,13 +28,13 @@ def splitCombinations(arr,minRange,maxRange): #Return the differente split combi
     return splits
 
 ''' Method that create a Node with minimum split entropy for a list of combinations in a dataframe of data '''
-def nodeForMinEntropy(splits,df,target):
+def nodeForMinEntropy(splits,df):
     n_lambda = df.shape[0]
     #entropies={}
     minEntropy = 1 #Max theorical entropy for a binary target value
     selectedSplit = None
-    df['target'] = target
-    selectedVariable
+    
+    selectedVariable = None
     for variable in splits:
         for split in splits[variable]:
             type1 = split[0]
@@ -74,8 +74,8 @@ def nodeForMinEntropy(splits,df,target):
     return Node(decisionRule,criterionValue,countValues)
 
 
-    def createNodeFromCriterion(splits,df,y,criterion):
+def createNodeFromCriterion(splits,df,criterion):
 
-        if(criterion.lower() == 'entropy'):
-            return nodeForMinEntropy(splits,df,y,criterion)
+    if(criterion.lower() == 'entropy'):
+        return nodeForMinEntropy(splits,df)
          

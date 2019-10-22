@@ -13,4 +13,7 @@ class Node():
 
     def appendRightChild(self,child):
         self.leftChild=child
+
+    def getDecisionRule(self):
+        return self.decisionRule
     
